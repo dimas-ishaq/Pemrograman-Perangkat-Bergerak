@@ -21,8 +21,8 @@
         class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0 ">
         <main class="flex flex-col w-full my-8  ">
             {{-- sidebar --}}
-            <div class="flex flex-row sm:ml-64 md:ml-70 justify-start items-center mb-4 gap-x-4">
-                <div class=" flex flex-col justify-center items-center">
+            <div class="flex flex-row sm:ml-64 md:ml-70 justify-start items-center mb-4 space-x-2">
+                <div class="flex flex-col justify-center items-center">
                     @include('layout.sidebar')
                 </div>
                 <div class="flex flex-col justify-between items-center w-full">
@@ -45,58 +45,82 @@
                         </div>
                     </form>
                 </div>
+                <div class="rounded-md border border-gray-300 bg-gray-50 p-2">
+                    <img src="{{ asset('images/cart.png') }}" alt="" class="w-8 h-8">
+                </div>
 
 
             </div>
             {{-- end sidebar --}}
 
             {{-- food content --}}
-            <div class=" ml-20 md:ml-70 sm:ml-64 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 ">
-                <div class="w-full">
-                    <a href="#"
-                        class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <div class="ml-20 md:ml-70 sm:ml-64">
+                <div
+                    class="  grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 ">
+                    <div class="w-full">
+                        <a href="#"
+                            class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            <div class="flex justify-center items-center w-full mb-2">
+                                <img src="{{ asset("images/products/olatte.png") }}" alt=""
+                                    class="w-[180px] h-[180px] object-cover shadow-md rounded-full">
+                            </div>
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Odading
+                                Mang
+                                Oleh</h5>
+                            <p class="text-sm text-gray-700 dark:text-gray-400 line-clamp-3 mb-2">Lorem ipsum dolor sit
+                                amet consectetur, adipisicing elit. Illum, mollitia.</p>
+                            <p class="text-2xl font-bold text-right">$75</p>
+                        </a>
 
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
-                            technology acquisitions 2021</h5>
-                        <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
-                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    </a>
+                    </div>
+                    <div class="w-full">
+                        <a href="#"
+                            class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            <div class="flex justify-center items-center w-full mb-2">
+                                <img src="{{ asset("images/products/olatte.png") }}" alt=""
+                                    class="w-[180px] h-[180px] object-cover shadow-md rounded-full">
+                            </div>
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Odading
+                                Mang
+                                Oleh</h5>
+                            <p class="text-sm text-gray-700 dark:text-gray-400 line-clamp-3 mb-2">Lorem ipsum dolor sit
+                                amet consectetur, adipisicing elit. Illum, mollitia.</p>
+                            <p class="text-2xl font-bold text-right">$75</p>
+                        </a>
 
-                </div>
-                <div>
+                    </div>
+                    <div class="w-full">
+                        <a href="#"
+                            class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            <div class="flex justify-center items-center w-full mb-2">
+                                <img src="{{ asset("images/products/olatte.png") }}" alt=""
+                                    class="w-[180px] h-[180px] object-cover shadow-md rounded-full">
+                            </div>
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Odading
+                                Mang
+                                Oleh</h5>
+                            <p class="text-sm text-gray-700 dark:text-gray-400 line-clamp-3 mb-2">Lorem ipsum dolor sit
+                                amet consectetur, adipisicing elit. Illum, mollitia.</p>
+                            <p class="text-2xl font-bold text-right">$75</p>
+                        </a>
 
-                    <a href="#"
-                        class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    </div>
+                    <div class="w-full">
+                        <a href="#"
+                            class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            <div class="flex justify-center items-center w-full mb-2">
+                                <img src="{{ asset("images/products/olatte.png") }}" alt=""
+                                    class="w-[180px] h-[180px] object-cover shadow-md rounded-full">
+                            </div>
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Odading
+                                Mang
+                                Oleh</h5>
+                            <p class="text-sm text-gray-700 dark:text-gray-400 line-clamp-3 mb-2">Lorem ipsum dolor sit
+                                amet consectetur, adipisicing elit. Illum, mollitia.</p>
+                            <p class="text-2xl font-bold text-right ">$75</p>
+                        </a>
 
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
-                            technology acquisitions 2021</h5>
-                        <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
-                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    </a>
-
-                </div>
-                <div>
-
-                    <a href="#"
-                        class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
-                            technology acquisitions 2021</h5>
-                        <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
-                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    </a>
-
-                </div>
-                <div>
-
-                    <a href="#"
-                        class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
-                            technology acquisitions 2021</h5>
-                        <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
-                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    </a>
+                    </div>
 
                 </div>
             </div>
