@@ -39,8 +39,7 @@
 
             {{-- food content --}}
             <div class="ml-20 md:ml-70 sm:ml-64">
-                <div
-                    class="  grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 ">
+                <div class="  grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 ">
                     <div class="w-full">
                         <a href="#"
                             class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
@@ -114,6 +113,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    @RegisterServiceWorkerScript
 </body>
 
 </html>

@@ -87,6 +87,7 @@
         lucide.createIcons();
     </script>
     @stack('scripts')
+    @RegisterServiceWorkerScript
 </body>
 
 </html>
