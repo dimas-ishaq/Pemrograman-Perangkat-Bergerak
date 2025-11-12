@@ -17,7 +17,9 @@ class Product extends Model
         "stock",
         "description",
         "image",
-        "is_deleted"
+        "is_deleted",
+        "category_id",
+        "status"
     ];
 
     public function user()

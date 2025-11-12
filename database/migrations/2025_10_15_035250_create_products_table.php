@@ -21,6 +21,8 @@ return new class extends Migration
             $table->text('description');
             $table->string('image');
             $table->boolean('is_deleted')->default(false);
+            $table->foreignId("category_id")->constrained("categories","id")->onDelete("cascade");
+            $table->boolean("status")->default(false);
             $table->timestamps();
         });
     }
