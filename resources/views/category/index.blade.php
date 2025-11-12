@@ -1,7 +1,18 @@
 @include('layout.head')
+@if (session('success'))
+    <x-toast type="success" :message="session('success')" />
+@endif
+
+@if (session('error'))
+    <x-toast type="danger" :message="session('error')" />
+@endif
+
+@if (session('warning'))
+    <x-toast type="warning" :message="session('warning')" />
+@endif
 
 <body class="flex flex-col justify-center items-center w-full px-8">
-    
+
     <div
         class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0 ">
         <main class="flex flex-col w-full my-8  ">
@@ -10,7 +21,7 @@
                 <div class="flex flex-col justify-center items-center">
                     @include('layout.sidebar')
                 </div>
-                <div class="flex flex-col justify-between items-center w-full space-y-4">
+                <div class=" flex flex-col justify-between items-start w-full space-y-4">
                     <form class="w-full">
                         <label for="default-search"
                             class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
@@ -30,11 +41,20 @@
                         </div>
                     </form>
 
-                    
+                    <button data-modal-target="add-category-modal" data-modal-toggle="add-category-modal"
+                        class="flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 px-3 py-2 text-sm font-medium rounded-lg  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        type="button">
+                        <i data-lucide="plus"></i>
+                        Add Category
+                    </button>
+
+
+
+
 
 
                     <!-- Main modal -->
-                    <div id="" tabindex="-1" aria-hidden="true"
+                    <div id="add-category-modal" tabindex="-1" aria-hidden="true"
                         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
                         <div class="relative p-4 w-full max-w-2xl max-h-full">
                             <!-- Modal content -->
@@ -42,13 +62,13 @@
                         </div>
                     </div>
 
-                   
-
-
+                    <div class="w-full">
+                        <div class="text-xl font-bold mb-4">
+                            Product Category
+                        </div>
+                        @include('components.category-table', ['categories' => $categories])
+                    </div>
                 </div>
-
-
-
             </div>
             {{-- end sidebar --}}
 

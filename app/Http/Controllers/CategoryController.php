@@ -13,4 +13,18 @@ class CategoryController extends Controller
         $categories = Category::all();
         return view('category.index', compact('categories'));
     }
+
+    public function store(Request $request){
+        $validated = $request->validate([
+            'name' => 'required|max:255',
+            'description' => 'required|string',
+        ]);
+
+        Category::create([
+            'name' => $validated["name"],
+            'description'=>$validated["description"]
+        ]);
+
+        return redirect()->route('category.index')->with('success', 'Produk berhasil ditambahkan!');
+    }
 }
