@@ -84,6 +84,10 @@
                         </div>
                     </div>
 
+                    <div>
+                        @include("components.product-grid",['products' => $products])
+                    </div>
+
 
                 </div>
 
