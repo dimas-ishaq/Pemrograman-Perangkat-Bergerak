@@ -1,0 +1,7 @@
+<x-layouts.admin>
+<div class="p-4">
+        <div class="p-4 border-1 border-default border-dashed rounded-base">
+
+        </div>
+    </div>
+</x-layouts.admin>

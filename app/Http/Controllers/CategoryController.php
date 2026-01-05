@@ -11,7 +11,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('category.index', compact('categories'));
+        return view('admin.categories.index', compact('categories'));
     }
 
     public function store(Request $request){
@@ -25,6 +25,6 @@ class CategoryController extends Controller
             'description'=>$validated["description"]
         ]);
 
-        return redirect()->route('category.index')->with('success', 'Produk berhasil ditambahkan!');
+        return redirect()->route('categories.index')->with('success', 'Produk berhasil ditambahkan!');
     }
 }

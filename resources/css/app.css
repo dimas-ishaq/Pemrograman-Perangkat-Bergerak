@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @source "../../node_modules/flowbite";
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -7,12 +7,64 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-}
 
+  
+    --color-electric-green-50: #e5ffeb;
+    --color-electric-green-100: #ccffd7;
+    --color-electric-green-200: #99ffaf;
+    --color-electric-green-300: #66ff87;
+    --color-electric-green-400: #33ff5f;
+    --color-electric-green-500: #00ff37;
+    --color-electric-green-600: #00cc2c;
+    --color-electric-green-700: #009921;
+    --color-electric-green-800: #006616;
+    --color-electric-green-900: #00330b;
+    --color-electric-green-950: #002408;
+
+    /* --- DARK & LIGHT SIDE-BY-SIDE (NO OVERRIDE) --- */
+
+    /* BRAND COLORS (Tetap sama untuk kedua mode) */
+    --color-brand-primary: #00ff62; /* 500 */
+    --color-brand-primary-strong: #00cc4e; /* 600 */
+    --color-brand-primary-soft: #e5ffef; /* 50 */
+
+    /* NEUTRAL - LIGHT MODE */
+    --color-neutral-light-surface: #ffffff;
+    --color-neutral-light-section: #e5ffef; /* 50 */
+    --color-border-light: #ccffe0; /* 100 */
+
+    /* NEUTRAL - DARK MODE */
+    --color-neutral-dark-surface: #00240e; /* 950 */
+    --color-neutral-dark-section: #003314; /* 900 */
+    --color-border-dark: #006627; /* 800 */
+
+    /* FOREGROUND - LIGHT MODE */
+
+    --color-fg-light-body: #003314; /* 900 */
+    --color-fg-light-heading: #00240e; /* 950 */
+
+    /* FOREGROUND - DARK MODE */
+    --color-fg-dark-body: #ccffe0; /* 100 */
+    --color-fg-dark-heading: #ffffff; /* 800 */
+
+    --color-danger-primary: #ff0055; /* Warna Utama Danger (Neon Red) */
+    --color-danger-hover: #e6004d; /* Lebih gelap sedikit untuk hover */
+    --color-danger-active: #cc0044; /* Untuk keadaan ditekan */
+    --color-danger-soft: #fff0f5; /* BG sangat muda untuk Light Mode */
+    --color-danger-subtle: #ffd1df; /* Border tipis untuk Light Mode */
+
+    /* FOREGROUND DANGER (Teks & Ikon) */
+    --color-fg-light-danger: #990033; /* Teks merah gelap untuk Light Mode */
+    --color-fg-dark-danger: #ff99bb;
+
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
 
 @source "../../node_modules/flowbite";
 @import "flowbite/src/themes/default";
 
 @plugin "flowbite/plugin";
+/* input.css */
+@custom-variant dark (&:where(.dark, .dark *));
