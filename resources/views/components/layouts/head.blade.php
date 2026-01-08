@@ -54,3 +54,8 @@
 @if (session('warning'))
     <x-toast type="warning" :message="session('warning')" />
 @endif
+
+@if ($errors->any())
+    <x-toast type="danger" :message="$errors->first()" />
+@endif
+

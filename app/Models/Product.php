@@ -13,6 +13,7 @@ class Product extends Model
 
         "user_id",
         "name",
+        "slug",
         "price",
         "stock",
         "description",
@@ -36,8 +37,8 @@ class Product extends Model
         return $this->hasMany(OrderDetail::class);
     }
 
-    public function categories(){
-        return $this->belongsToMany(Category::class);
+    public function category(){
+        return $this->belongsTo(Category::class);
     }
 
 }

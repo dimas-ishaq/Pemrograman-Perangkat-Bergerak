@@ -1,4 +1,4 @@
-@props(['id','modal','name','description'])
+@props(['id', 'modal', 'name', 'description'])
 <x-modals.popup modal="{{ $modal }}">
 
     <x-slot:btn>
@@ -12,17 +12,16 @@
         </div>
     </x-slot:btn>
 
-    <div class="relative p-4 w-full max-w-2xl max-h-full">
+    <div class="relative p-4 w-full max-w-2xl max-h-full text-fg-light-body">
         <!-- Modal content -->
-        <div
-            class="relative bg-white dark:text-white dark:bg-gray-700 rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-light-section  rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
                     Edit Category
                 </h3>
                 <button type="button"
-                    class="text-body bg-transparent hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center"
+                    class=" bg-transparent  hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center"
                     data-modal-hide="popup-modal-{{ $modal }}">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
                         height="24" fill="none" viewBox="0 0 24 24">
@@ -34,38 +33,31 @@
             </div>
             <!-- Modal body -->
             <div class="space-y-4 md:space-y-6 py-4 md:py-6">
-                <form class="max-w-md mx-auto">
+                <form class="max-w-md mx-auto " method="POST" action="{{ route('categories.update', $id) }}">
+                    @method('PUT')
+                    @csrf
                     <div class="mb-5">
-                        <label for="email-alternative" class="block mb-2.5 text-sm font-medium text-heading">
+                        <label for="name" class="block mb-2.5 text-sm font-medium text-heading">
                             Category Name</label>
-                        <input type="email" id="email-alternative"
-                            class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body"
-                            required value="{{ $name }}"/>
+                        <input type="text" id="name" name="name"
+                            class=" border  text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:"
+                            required value="{{ $name }}" />
                     </div>
                     <div class="mb-5">
-
-                        <label for="message" class="block mb-2.5 text-sm font-medium text-heading">Description</label>
-                        <textarea id="message" rows="4"
-                            class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body">{{ $description }}</textarea>
-
+                        <label for="description"
+                            class="block mb-2.5 text-sm font-medium text-heading">Description</label>
+                        <textarea id="description" rows="4" name="description"
+                            class=" border  text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:">{{ $description }}</textarea>
                     </div>
 
                     <div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
+                        <button type="submit"
+                            class="text-fg-light-body bg-brand-primary-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Simpan</button>
                         <button data-modal-hide="popup-modal-{{ $modal }}" type="button"
-                            class="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Simpan</button>
-                        <button data-modal-hide="popup-modal-{{ $modal }}" type="button"
-                            class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Batal</button>
+                            class="  box-border border  -medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Batal</button>
                     </div>
                 </form>
-
-
-
-
             </div>
-            <!-- Modal footer -->
         </div>
     </div>
-
-
-
 </x-modals.popup>

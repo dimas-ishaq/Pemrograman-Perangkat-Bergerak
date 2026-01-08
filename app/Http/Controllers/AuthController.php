@@ -21,7 +21,8 @@ class AuthController extends Controller
         return view("auth.register.index");
     }
 
-    public function resetPassword(){
+    public function resetPassword()
+    {
         return view("reset-password.index");
     }
 
@@ -41,7 +42,7 @@ class AuthController extends Controller
             $request->session()->regenerate();
 
             $user = Auth::user();
-            
+
 
             // 3. Pengalihan Berdasarkan Peran (Role)
             if ($user->role === 'admin') {
@@ -54,15 +55,14 @@ class AuthController extends Controller
 
             // Fallback untuk role yang tidak dikenal
             return redirect()->intended(route('home'));
-
         }
 
         // 4. Autentikasi Gagal
         // Kirimkan error kembali ke halaman login jika kredensial salah
         return back()
-        ->withErrors(['email' => 'Kredensial tidak cocok.'])
-        ->with('error', 'Login Gagal! Silakan periksa kembali email dan password Anda.')
-        ->onlyInput('email');
+            ->withErrors(['email' => 'Kredensial tidak cocok.'])
+            ->with('error', 'Login Gagal! Silakan periksa kembali email dan password Anda.')
+            ->onlyInput('email');
     }
 
     public function registerAuth(Request $request)
@@ -81,13 +81,22 @@ class AuthController extends Controller
         ]);
 
         return redirect()->route('login')->with('success', 'Akun berhasil dibuat! Silakan masuk.');
-
     }
 
-    public function resetPasswordAuth(Request $request){
+    public function resetPasswordAuth(Request $request)
+    {
         $validated = $request->validate([
             'email' => 'required|email|exists:users,email',
         ]);
+    }
 
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 }

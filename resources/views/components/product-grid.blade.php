@@ -1,8 +1,9 @@
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    @foreach($products as $product)
-        <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition dark:bg-gray-800 dark:border-gray-700">
+<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    @foreach ($products as $product)
+        <div
+            class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
-                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" 
+                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}"
                     class="w-full h-48 object-cover rounded-md mb-4">
                 <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {{ $product->name }}

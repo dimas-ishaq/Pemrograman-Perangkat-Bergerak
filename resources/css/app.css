@@ -5,10 +5,10 @@
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
-
+[x-cloak] {
+    display: none !important;
+}
 @theme {
-
-  
     --color-electric-green-50: #e5ffeb;
     --color-electric-green-100: #ccffd7;
     --color-electric-green-200: #99ffaf;

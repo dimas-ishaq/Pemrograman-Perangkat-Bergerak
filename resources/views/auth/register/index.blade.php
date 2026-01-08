@@ -12,7 +12,7 @@
                         <!-- Kolom Kiri - Visual -->
                         <div class="hidden lg:flex w-full bg-center bg-no-repeat bg-cover"
                             data-alt="A vibrant and colorful flat lay of fresh ingredients and a delicious pasta dish, symbolizing the joy of cooking."
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBD9Emws0jWdzAI8VvxEb0WcXYE_c1pvl61LBiHfqSS4HyNv9JIeIrPVfnzX6kjWwK2D_vVtZSi6Aqsgzc-764hOs6_zEb79rTWmMgC4TUTbCUVDkb0kgAbLzusEUSr5kg61iwH2pk4p5sufZewggNR5f7mb8JNcLJMooRz8rsUFFETdA-wIc8J8kFZ3j9za4wNdgd5zxhVcoVJyxRDVbhY2ID6gWl8Hxlb4T-r_1IY7AbUcIkZirtdrQGo2NHZxaJJ4l8s8mksLr8");'>
+                            style='background-image: url("{{ asset('images/img_register.png') }}");'>
                         </div>
                         <!-- Kolom Kanan - Form -->
                         <div

@@ -48,7 +48,7 @@
                                             </svg>
                                         </div>
                                         <input type="email" id="input-group-1" name="email"
-                                            class="block w-full ps-9 pe-3 py-2.5 text-fg-light-body border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3  shadow-xs placeholder:text-body"
+                                            class="block w-full ps-9 pe-3 py-2.5 text-fg-light-body border  text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3  shadow-xs placeholder:"
                                             placeholder="name@mail.com" required>
                                     </div>
                                 </div>
@@ -56,12 +56,12 @@
                                     <label for="password" class="block mb-2.5 text-sm font-medium text-heading">Your
                                         password</label>
                                     <input type="password" id="password" name="password"
-                                        class="text-fg-light-body border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+                                        class="text-fg-light-body border  text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:"
                                         placeholder="••••••••" required />
                                 </div>
                                 <label for="remember" class="flex items-start mb-5">
                                     <input id="remember" type="checkbox" value=""
-                                        class="w-4 h-4 border border-default-medium rounded-xs text-fg-light-body focus:ring-2 focus:ring-brand-soft"
+                                        class="w-4 h-4 border  rounded-xs text-fg-light-body focus:ring-2 focus:ring-brand-soft"
                                         required checked />
                                     <p class="ms-2 text-sm font-medium text-heading select-none">Ingatkan saya saat
                                         berkunjung kembali ke halaman ini</p>
